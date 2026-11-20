@@ -1,0 +1,9 @@
+project: savantenvs/utf8.h
+target: fuzz-search
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-search/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-search
+    libfuzzer: true
+    timeout: 5

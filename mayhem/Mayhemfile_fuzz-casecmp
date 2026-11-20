@@ -1,0 +1,9 @@
+project: savantenvs/utf8.h
+target: fuzz-casecmp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-casecmp/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-casecmp
+    libfuzzer: true
+    timeout: 5

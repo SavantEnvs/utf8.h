@@ -1,0 +1,9 @@
+project: savantenvs/utf8.h
+target: fuzz-len
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-len/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-len
+    libfuzzer: true
+    timeout: 5
